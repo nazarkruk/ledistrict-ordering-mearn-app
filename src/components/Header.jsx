@@ -9,8 +9,8 @@ export const Header = () => {
           <div>Home</div>
           <div>About</div>
         </div>
-        <div className="flexitms-center justify-content-center space-x-4">
-          <div>Card</div>
+        <div className="flex itms-center justify-content-center space-x-4">
+          <div>Cart</div>
           <div>Log In</div>
           <dive>Sign Up</dive>
         </div>
