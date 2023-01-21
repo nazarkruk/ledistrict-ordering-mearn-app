@@ -1,8 +1,8 @@
 import React from "react";
-import Carousel from "../../components/Carousel";
+import { Banner } from "../../components/Banner";
 
 const Home = () => {
-  return <Carousel />;
+  return <Banner />;
 };
 
 export default Home;
