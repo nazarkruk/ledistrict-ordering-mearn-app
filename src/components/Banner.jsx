@@ -21,6 +21,7 @@ export const Banner = () => {
         </div>
       </div>
       <div className="banner-image w-full md:w-1/2 p-3 flex justify-end">
+        {/* <Maincarousel /> */}
         <img
           src={require("../assets/images/carousel-1.jpg")}
           alt="banner"
