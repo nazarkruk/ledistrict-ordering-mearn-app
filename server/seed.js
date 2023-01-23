@@ -24,7 +24,7 @@ async function main() {
     await categoriesCollection.insertMany(categories);
 
     let imageUrls = [
-      "https://res.cloudinary.com/dlv0lekro/image/upload/v16570561g51/food-ordering-app/1_mfgcb5.pn",
+      "https://res.cloudinary.com/dlv0lekro/image/upload/v1657056151/food-ordering-app/1_mfgcb5.png",
       "https://res.cloudinary.com/dlv0lekro/image/upload/v1657056151/food-ordering-app/2_afbbos.png",
       "https://res.cloudinary.com/dlv0lekro/image/upload/v1657056151/food-ordering-app/3_iawvqb.png",
     ];
