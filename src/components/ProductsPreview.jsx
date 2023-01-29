@@ -3,9 +3,12 @@ import { ProductPreviewCard } from "./ProductPreviewCart";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { AddProduct } from "./AddProduct";
+import { useDispatch } from "react-redux";
+import { addToCard } from "../stores/cart/cartSlice";
 
 export const ProductsPreview = () => {
   const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
 
   const responsive = {
     superLargeDesktop: {
@@ -26,6 +29,7 @@ export const ProductsPreview = () => {
       items: 1,
     },
   };
+
   useEffect(() => {
     fetch("http://localhost:8080/api/products")
       .then((response) => response.json())
@@ -34,7 +38,7 @@ export const ProductsPreview = () => {
   }, []);
 
   const onAddProduct = (product) => {
-    console.log(product);
+    dispatch(addToCard(product));
   };
 
   return (

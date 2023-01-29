@@ -1,7 +1,7 @@
 import { AddProduct } from "./AddProduct";
 export const ProductPreviewCard = ({ product, onAddProduct }) => {
   const addProduct = () => {
-    // will create after set up redux
+    onAddProduct(product);
   };
   return (
     <div className="w-full p-4 m-2 rounded text-white bg-gradient-to-b from-slate-600 to-transparent text-center">
