@@ -1,9 +1,11 @@
 import ld_logo from "../assets/images/ld_logo.png";
 import cartIcon from "../assets/icons/cart.svg";
-
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button from "./elements/Button";
+import { useEffect, useState } from "react";
 
-export const Header = () => {
+export const Header = ({ cartCount }) => {
   return (
     <nav id="header" className="bg-black text-white">
       <div className="container w-full mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -24,11 +26,16 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="flex itms-center justify-content-center space-x-4">
+        <div className="flex items-center justify-content-center space-x-4">
           <Link to="/login">Log In</Link>
           <Link to="/register">Sign Up</Link>
-          <Link to="/cart">
+          <Link to="/cart" className="mr-4 relative">
             <img src={cartIcon} alt="cart" />
+            {cartCount > 0 ? (
+              <div className="rounded-full bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-1">
+                {cartCount}
+              </div>
+            ) : null}
           </Link>
         </div>
       </div>
